@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import './globals.css'
 
 export const metadata = {
@@ -10,31 +11,38 @@ export default function RootLayout({ children }) {
     <html>
       <body>
         <h1>
-          <a href="/">WEB</a>
+          <Link href="/">WEB</Link>
         </h1>
 
         <ol>
           <li>
-            <a href="/read1/">html</a>
+            <Link href="/read/1">html</Link>
           </li>
           <li>
-            <a href="/read2/">css</a>
+            <Link href="/read/2">css</Link>
           </li>
         </ol>
-        {children}
+           {children}
         <ul>
           <li>
-            <a href="/ceate/">Create</a>
+            <Link href="/create/">Create</Link>
           </li>
           <li>
-            <a href="/update1/">Update</a>
+            <Link href="/update/1">Update</Link>
           </li>
           <li>
              <input type="button" value="delete"/>
           </li>
         </ul>
-        {children}
       </body>
     </html>
   );
 }
+
+  // Resources
+  // http://localhost:9999/posts
+  // http://localhost:9999/comments
+  // http://localhost:9999/profile
+
+  // Home
+  // http://localhost:9999
